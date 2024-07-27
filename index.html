@@ -38,7 +38,7 @@
         <div class="text-center">
             <h2 class="text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Welcome to EyuApps</h2>
             <p class="text-2xl mb-8 animate__animated animate__fadeInUp animate__delay-1s">Discover and download the best android apps across various categories developed by Eyuel Engida.</p>
-            <a href="#games" class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors duration-300">Get Started</a>
+            <a href="#games" class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors duration-300 get-started">Get Started <i class="fa-solid fa-download fa-beat"></i></i></a>
         </div>
     </section>
 
@@ -150,5 +150,16 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
