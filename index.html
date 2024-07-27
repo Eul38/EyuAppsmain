@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyuApps</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-poppins">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">EyuApps</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#games" class="hover:underline">Games</a></li>
+                    <li><a href="#tools" class="hover:underline">Tools</a></li>
+                    <li><a href="#socials" class="hover:underline">Socials</a></li>
+                    <li><a href="#education" class="hover:underline">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-blue-500 text-white py-20 flex items-center justify-center min-h-screen">
+        <div class="text-center">
+            <h2 class="text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Welcome to EyuApps</h2>
+            <p class="text-2xl mb-8 animate__animated animate__fadeInUp animate__delay-1s">Discover and download the best android apps across various categories developed by Eyuel Engida.</p>
+            <a href="#games" class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors duration-300">Get Started</a>
+        </div>
+    </section>
+
+    <!-- App Categories -->
+    <section id="games" class="category py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example App -->
+                <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;" src="images/guess.png" alt="Game 1">
+                    <h3 class="text-2xl font-bold mb-2">Guess</h3>
+                    <p class="mb-4">Exciting number guessing game.</p>
+                    <br>
+                    <a href="downloads/Guess.apk" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a>
+                </div>
+                <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                    <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/game.png" alt="Game 1">
+                    <h3 class="text-2xl font-bold mb-2">Snake3</h3>
+                    <p class="mb-4">A fun snake game.</p>
+                    <label for="snake3-version">Select Version:</label>
+                    <select id="snake3-version" class="version-select" style="padding: 8px 12px; border-radius: 4px; border: 1px solid #4CAF50; background-color: #f9f9f9; font-family: Arial, sans-serif; font-size: 14px;">
+                        <option value="downloads/Snake3_v3.apk">Version 3 (3.4 mb)</option>
+                        <option value="downloads/Snake3_v4.apk">Version 4 (12.7 mb)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <a id="snake3-download-btn" href="downloads/Snake3_v3.apk" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a>
+                </div>
+                
+                <script>
+                    document.getElementById('snake3-version').addEventListener('change', function() {
+                        var selectedVersion = this.value;
+                        document.getElementById('snake3-download-btn').href = selectedVersion;
+                    });
+                </script>
+                
+                </div>
+                <!-- More apps... -->
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="category py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example App -->
+                <div class="app bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;"src="images/key.jpg" alt="Tool">
+                    <h3 class="text-2xl font-bold mb-2">Passwords</h3>
+                    <p class="mb-4">Tired of memorizing login site info?</p>
+                    <p class="mb-4">you can use this password safe app to store all your login site info and more!</p>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a>
+                </div>
+                <!-- More apps... -->
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="category py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Socials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example App -->
+                <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;"src="images/paper-plane.png" alt="Social">
+                    <h3 class="text-2xl font-bold mb-2">Social</h3>
+                    <p class="mb-4">To be released soon!</p>
+              <!--      <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a> -->
+                </div>
+                <!-- More apps... -->
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="category py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example App -->
+                <div class="app bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;" src="images/notebook.png" alt="Education">
+                    <h3 class="text-2xl font-bold mb-2">Education</h3>
+                    <p class="mb-4">To be released soon!</p>
+               <!--     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a>  -->
+                </div>
+                <!-- More apps... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; EyuApps. All rights reserved.</p>
+            <div class="social-links flex justify-center space-x-4 mt-4">
+                <a href="https://www.facebook.com/profile.php?id=61557995417592&mibextid=ZbWKwL" class="hover:text-gray-300">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://twitter.com/eul4525" class="hover:text-gray-300">
+                    <i class="fab fa-twitter"></i> X
+                </a>
+                <a href="https://t.me/Eul_zzz" class="hover:text-gray-300">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

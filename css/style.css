@@ -1,0 +1,47 @@
+/* Add your custom styles here */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(0, 70, 187, 1) 100%);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.category {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
