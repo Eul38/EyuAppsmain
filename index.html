@@ -19,41 +19,48 @@
 <body class="bg-gray-100 text-gray-800 font-poppins">
 
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4 shadow-md fixed w-full z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">EyuApps</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#games" class="hover:underline">Games</a></li>
-                    <li><a href="#tools" class="hover:underline">Tools</a></li>
-                    <li><a href="#socials" class="hover:underline">Socials</a></li>
-                    <li><a href="#education" class="hover:underline">Education</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="bg-gradient-to-r from-purple-600 to-pink-400 text-white py-6 shadow-md fixed w-full z-50 border-b-4 border-pink-700">
+    <div class="container mx-auto flex justify-between items-center px-6 header-container">
+        <h1 class="text-4xl font-bold flex items-center">
+            <img src="images/logo.png" alt="Logo" class="rounded-full mr-2" style="width: 30px; height: 30px;">
+            EyuApps
+        </h1>
+        <nav>
+            <ul class="flex space-x-6 text-lg font-semibold">
+                <li><a href="#games" class="hover:text-pink-200 transition duration-300">Games</a></li>
+                <li><a href="#tools" class="hover:text-pink-200 transition duration-300">Tools</a></li>
+                <li><a href="#socials" class="hover:text-pink-200 transition duration-300">Socials</a></li>
+                <li><a href="#education" class="hover:text-pink-200 transition duration-300">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
 
     <!-- Hero Section -->
-    <section class="hero bg-gradient-to-r from-blue-500 to-blue-300 text-white py-20 flex items-center justify-center min-h-screen">
-        <div class="text-center">
+    <section class="hero bg-gradient-to-r from-purple-500 to-pink-300 text-white py-24 flex items-center justify-center min-h-screen relative overflow-hidden">
+        <div class="text-center px-4">
             <h2 class="text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Welcome to EyuApps</h2>
             <p class="text-2xl mb-8 animate__animated animate__fadeInUp animate__delay-1s">Discover and download fun/cool android apps across various categories, all developed by Eyuel Engida.</p>
-            <a href="#games" class="bg-white text-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors duration-300 get-started">Get Started <i class="fa-solid fa-download fa-beat"></i></i></a>
+            <a href="#games" class="bg-white text-purple-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors duration-300 get-started">Get Started <i class="fa-solid fa-download fa-beat"></i></a>
         </div>
+        <div class="absolute top-0 left-0 w-24 h-24 bg-white rounded-full opacity-20 animate-float"></div>
+        <div class="absolute bottom-10 right-10 w-20 h-20 bg-white rounded-full opacity-20 animate-float animation-delay-2000"></div>
     </section>
 
     <!-- App Categories -->
     <section id="games" class="category py-16 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center text-purple-700">Games</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!--  App1 -->
+                <!-- Example App -->
                 <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;" src="images/guess.png" alt="Game 1">
+                    <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/guess.png" alt="Game 1">
                     <h3 class="text-2xl font-bold mb-2">Guess</h3>
                     <p class="mb-4">Exciting number guessing game.</p>
                     <br>
-                    <a href="downloads/Guess.apk" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded hover:from-blue-700 hover:to-blue-500 transition-colors duration-300">Download</a>
+                    <a href="downloads/Guess.apk" class="bg-gradient-to-r from-purple-500 to-pink-700 text-white px-4 py-2 rounded hover:from-pink-700 hover:to-purple-500 transition-colors duration-300">Download</a>
                 </div>
                 <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
                     <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/game.png" alt="Game 1">
@@ -66,73 +73,58 @@
                     </select>
                     <br>
                     <br>
-                    <a id="snake3-download-btn" href="downloads/Snake3_v3.apk" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded hover:from-blue-700 hover:to-blue-500 transition-colors duration-300">Download</a>
+                    <a id="snake3-download-btn" href="downloads/Snake3_v3.apk" class="bg-gradient-to-r from-purple-500 to-pink-700 text-white px-4 py-2 rounded hover:from-pink-700 hover:to-purple-500 transition-colors duration-300">Download</a>
                 </div>
-                
-                <script>
-                    document.getElementById('snake3-version').addEventListener('change', function() {
-                        var selectedVersion = this.value;
-                        document.getElementById('snake3-download-btn').href = selectedVersion;
-                    });
-                </script>
-                
-                </div>
-                <!-- More apps... -->
             </div>
         </div>
     </section>
 
     <section id="tools" class="category py-16 bg-gray-100">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Tools</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center text-purple-700">Tools</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- App1 -->
+                <!-- Example App -->
                 <div class="app bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;"src="images/key.jpg" alt="Tool">
+                    <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/key.jpg" alt="Tool">
                     <h3 class="text-2xl font-bold mb-2">Passwords</h3>
                     <p class="mb-4">Tired of memorizing login site info?</p>
-                    <p class="mb-4">you can use this password safe app to store all your login site info and more!</p>
-                    <a href="downloads/Passwords.apk" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded hover:from-blue-700 hover:to-blue-500 transition-colors duration-300">Download</a>
+                    <p class="mb-4">You can use this password safe app to store all your login site info and more!</p>
+                    <a href="downloads/Passwords.apk" class="bg-gradient-to-r from-purple-500 to-pink-700 text-white px-4 py-2 rounded hover:from-pink-700 hover:to-purple-500 transition-colors duration-300">Download</a>
                 </div>
-                <!-- More apps... -->
             </div>
         </div>
     </section>
 
     <section id="socials" class="category py-16 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Socials</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center text-purple-700">Socials</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Example App -->
                 <div class="app bg-gray-100 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;"src="images/paper-plane.png" alt="Social">
+                    <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/paper-plane.png" alt="Social">
                     <h3 class="text-2xl font-bold mb-2">Social</h3>
                     <p class="mb-4">To be released soon!</p>
-              <!--      <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a> -->
                 </div>
-                <!-- More apps... -->
             </div>
         </div>
     </section>
 
     <section id="education" class="category py-16 bg-gray-100">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Education</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center text-purple-700">Education</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- App1 -->
+                <!-- Example App -->
                 <div class="app bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                    <img style="max-width: 20%; height: sauto; display:block; margin: 0 auto; border-radius: 15px;" src="images/notebook.png" alt="Education">
+                    <img style="max-width: 20%; height: auto; display:block; margin: 0 auto; border-radius: 15px;" src="images/notebook.png" alt="Education">
                     <h3 class="text-2xl font-bold mb-2">Education</h3>
                     <p class="mb-4">To be released soon!</p>
-               <!--     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Download</a>  -->
                 </div>
-                <!-- More apps... -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-8">
+    <footer class="bg-gradient-to-r from-purple-600 to-pink-400 text-white py-8">
         <div class="container mx-auto text-center">
             <p>&copy; EyuApps. All rights reserved.</p>
             <div class="social-links flex justify-center space-x-4 mt-4">
@@ -158,6 +150,11 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        document.getElementById('snake3-version').addEventListener('change', function() {
+            var selectedVersion = this.value;
+            document.getElementById('snake3-download-btn').href = selectedVersion;
         });
     </script>
     
